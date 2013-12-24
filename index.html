@@ -26,18 +26,7 @@
   <script>
     BUI.use(['common/main'],function (MainPage) {
       var chapters = [
-        {
-          id : 'start',
-          text : 'BUI 入门',
-          children:[
-            {id:'introduce',text : '简介'},
-            {id:'hello',text : 'Hello BUI!'},
-            {id:'install',text : '加载文件及配置'},
-            {id:'combine',text : 'combine BUI文件'},
-            {id:'current',text : 'BUI的现状'},
-            {id:'adapter',text : 'Kissy 的适配器'}
-          ]
-        },{
+       {
           id : 'fundament',
           text : 'BUI 基础',
           children : [
@@ -56,117 +45,6 @@
               {id : 'util-ua',text : '浏览器检测'},
               {id : 'util-cookie',text : 'Cookie帮助类'}
             ]}
-          ]
-        },{
-          id : 'widgets',
-          text : '控件',
-          children : [
-            {id : 'control',text : '控件基础',children:[
-              {id : 'life',text : '控件生命周期'},
-              {id : 'controller',text : 'controller 类'},
-              {id : 'view',text : 'view 类'},
-              {id : 'manager',text : '通用管理类'},
-              {id : 'attribute',text : '控件的配置和属性'},
-              {id : 'inherit',text : '控件继承'},
-              {id : 'children',text : '子控件管理'},
-              {id : 'template',text : '使用模板生成控件'},
-              {id : 'decorate',text : '使用Html生成控件'},
-              {id : 'loader',text : '异步加载控件内容'},
-              {id : 'depends',text : '控件依赖'},
-              {id : 'positon',text : '位置和对齐'}
-            ]},
-            {id : 'overlay',text : '浮层',children : [
-              {id : 'overlay-base',text : '基础浮层'},
-              {id : 'close',text : '关闭控件'},
-              {id : 'autoshow',text : '自动显示'},
-              {id : 'autohide',text : '自动隐藏'},
-              {id : 'dialog',text : '弹出框(dialog)'},
-              {id : 'message',text : '弹出框(message)'},
-              {id : 'tooltip',text : '提示信息(tooltip)'}
-            ]},
-            {id : 'clandar',text : '日历',children : [
-              {id : 'clandar-base',text : '基础日历'},
-              {id : 'datepicker',text : '日历选择'},
-              {id : 'monthpicker',text : '月份选择'}
-            ]},
-            {id : 'data',text : '数据存储',children : [
-              {id : 'store',text : '一般的Store'},
-              {id : 'proxy',text : '数据代理'},
-              {id : 'tree-store',text : 'tree store'},
-              {id : 'bindable',text : '数据绑定'}
-            ]},
-            {id : 'list',text : '列表',children : [
-              {id : 'list-base',text : '列表简介'},
-              {id : 'selection',text : '列表选中'},
-              {id : 'simple-list',text : '简单列表'},
-              {id : 'check-list',text : '勾选列表'},
-              {id : 'list-create',text : '列表生成'},
-              {id : 'list-status',text : '列表状态'}
-            ]},
-            {id : 'toolbar',text: '工具栏',children:[
-              {id : 'bar-base',text : '一般工具栏'},
-              {id : 'button-group',text : '按钮工具栏'},
-              {id : 'paging',text : '分页栏'},
-              {id : 'number-paging',text : '数字分页栏'}
-            ]},
-            {id : 'menu',text : '菜单',children : [
-              {id : 'menu-base',text : '基础菜单'},
-              {id : 'side-menu',text : '左侧菜单'},
-              {id : 'pop-menu',text : '弹出菜单'},
-              {id : 'context-menu',text : '上下文菜单'}
-            ]},
-            {id : 'tab',text : '切换标签',children : [
-              {id : 'tab-base',text : '基础切换标签'},
-              {id : 'tab-panel',text : '切换标签及面板'},
-              {id : 'nav-tab',text : '导航标签'}
-            ]},
-            {id : 'picker',text : '选择器',children : [
-              {id : 'list-picker',text : '一般选择器'},
-              {id : 'select',text : '选择框'},
-              {id : 'combox',text : '组合框'},
-              {id : 'suggest',text : '搜索提示框'},
-              {id : 'custom-picker',text : '更换选择内容'}
-            ]},
-            {id : 'form',text : '表单',children : [
-              {id : 'form-base',text : '表单简介'},
-              {id : 'field',text : '表单字段'},
-              {id : 'valid',text : '表单验证'},
-              {id : 'ad-valid',text : '自定义验证'},
-              {id : 'form-tip',text : '表单提示'}
-            ]},
-            {id : 'grid',text : '表格',children : [
-              {id : 'simple-grid',text : '简单表格'},
-              {id : 'grid-base',text : '复杂表格'},
-              {id : 'column',text : '列定义'},
-              {id : 'plugins',text : '插件'},
-              {id : 'edit-grid',text : '可编辑表格',children:[
-                {id : 'cell-edit',text : '单元格编辑'},
-                {id : 'row-eidt',text : '行编辑'},
-                {id : 'dialog-edit',text : '弹出框编辑'},
-                {id : 'form-edit',text : '表单联动'}
-              ]}
-            ]},
-            {id : 'tree',text : '树',children : [
-              {id : 'tree-base',text : '基本树'},
-              {id : 'tree-check',text : '树的选择'},
-              {id : 'tree-grid',text : 'Tree Grid'},
-              {id : 'tree-menu',text : 'tree menu'}
-            ]},
-            {id : 'editor',text : '编辑器',children : [
-              {id : 'eidtor-base',text : '基础编辑器'},
-              {id : 'row-editor',text : '记录编辑器'},
-              {id : 'dialog-editor',text : '弹出框编辑器'}
-            ]}
-          ]
-        },{
-          id : 'extension',
-          text : '扩展',
-          children : [
-            {id : 'new-control',text : '创建新的控件'},
-            {id : 'new-mixin',text : '新的mixin'},
-            {id : 'new-plugin',text : '编写插件'},
-            {id : 'build',text : '编译自己的模块'},
-            {id : 'role',text : '控件的功能'}
           ]
         }];
       new MainPage({
